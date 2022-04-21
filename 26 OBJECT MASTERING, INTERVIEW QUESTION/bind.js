@@ -35,3 +35,6 @@ const thirdPersonbill = firstPerson.chargeBill.bind(thirdPerson);
 thirdPersonbill(3000);
 thirdPersonbill(500);
 console.log("Third Person salary after charge bill : " + thirdPerson.salary);
+
+
+
