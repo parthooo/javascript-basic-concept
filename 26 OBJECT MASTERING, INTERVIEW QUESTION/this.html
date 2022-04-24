@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <h1>This is not confused anymore</h1>
+    <script>
+        const myObj = {
+            name: 'Kuddus Ali',
+            getfullname: function() {
+                console.log(this);
+                return 'Mr.' + this.name;
+            },
+        }  
+        
+
+        const anotherObj = {
+            name: 'Fuddus Ali',
+        }
+        anotherObj.getfullname = myObj.getfullname;
+        console.log(anotherObj.getfullname);
+        myObj.getfullname();
+        anotherObj.getfullname();
+
+
+        function add(a, b) {
+            console.log(this);
+
+            return a + b;
+        }
+        add(2, 3);
+
+        anotherObj.sum = add;
+        anotherObj.sum();
+    </script>
+
+</body>
+</html>
