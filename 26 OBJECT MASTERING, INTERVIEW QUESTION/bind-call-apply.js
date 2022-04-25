@@ -26,6 +26,7 @@ const thirdPerson = {
   salary: 100000,
 };
 
+
 // bind
 
 const secondPersonBill = firstPerson.chargeBill.bind(secondPerson);
